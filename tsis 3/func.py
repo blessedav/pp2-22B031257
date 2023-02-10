@@ -76,19 +76,19 @@ import random
 # print(has_33([1, 1, 3, 3]))
 # print(has_33([1, 3, 1]))
 # task 8
-def spy_game(nums):
-    for i in range(len(nums) - 2):
-        if nums[i] == 0 and nums[i + 1] == 0 and nums[i + 2] == 7:
-            return True
-        elif nums[i] == 0 and nums[i + 1] != 0:
-            return False
-        elif nums[i] == 0 and nums[i + 1] == 0 and nums[i + 2] != 7:
-            return False
+# def spy_game(nums):
+#     for i in range(len(nums) - 2):
+#         if nums[i] == 0 and nums[i + 1] == 0 and nums[i + 2] == 7:
+#             return True
+#         elif nums[i] == 0 and nums[i + 1] != 0:
+#             return False
+#         elif nums[i] == 0 and nums[i + 1] == 0 and nums[i + 2] != 7:
+#             return False
 
-print(spy_game([1,2,4,0,0,7,5])) 
-print(spy_game([1,0,2,4,0,5,7])) 
-print(spy_game([1,7,2,0,4,5,0]))
-print(spy_game([0, 7, 0, 7]))
+# print(spy_game([1,2,4,0,0,7,5])) 
+# print(spy_game([1,0,2,4,0,5,7])) 
+# print(spy_game([1,7,2,0,4,5,0]))
+# print(spy_game([0, 7, 0, 7]))
 
 # task 9
 
@@ -161,8 +161,6 @@ print(spy_game([0, 7, 0, 7]))
 #         elif num > gnum:
 #             guess += 1
 #             print("Your guess is too big.\nTake a guess.")
-#         elif guess == 3:
-#             print("You're out of guesses, try again")
 #         else:
 #             guess +=1
 #             print("Good job, {fname}! You guessed my number in {fguess} guesses!".format(fname = name, fguess = guess))
