@@ -1,24 +1,30 @@
-x = "Hello world"
-print(len(x))
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
 
-txt = "Hello world"
-x = txt[0]
+b = "Hello, World!"
+print(b[2:5])
 
-txt = "Hello world"
-x = txt[2:5]
+b = "Hello, World!"
+print(b[:5])
 
-txt = " Hello world "
-x = txt.strip()
+a = "Hello, World!"
+print(a.upper())
 
-txt = "Hello World"
-txt = txt.upper()
+a = "Hello, World!"
+print(a.lower())
 
-txt = "Hello world"
-txt = txt.lower()
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
 
-txt = "Hello World"
-txt = txt.replace("H", "J")
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
 
-age = 36
-txt = "My name is John, and I am {}"
-print(txt.format(age))
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
