@@ -1,10 +1,7 @@
-s="ThisIsMyString"
-cnt1=0
-cnt2=0
-for i in s:
-    if(i.isupper()):
-        cnt1+=1
-    elif(i.islower()):
-        cnt2+=1
-print("Uppercase:", cnt1)
-print("Lowercase:", cnt2)
+import os
+p = os.listdir(r"C:\Users\GIMISI\Desktop\pp2-labs\tsis 6\dirnfile")
+
+print('Exists:', os.access(__file__, os.F_OK))
+print('Readable:', os.access(__file__, os.R_OK))
+print('Writable:', os.access(__file__, os.W_OK))
+print('Executable:', os.access(__file__, os.X_OK))

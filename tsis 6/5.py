@@ -1,4 +1,4 @@
-a=[True, False, True]
-b=[True, 56, True]
-print(all(a))
-print(all(b))
+f = open(r"C:\Users\GIMISI\Desktop\pp2-labs\tsis 6\dirnfile\listhere.txt")
+a = ["list", "here"]
+for i in a:
+    f.write(i)

@@ -1,6 +1,9 @@
-s=input()
-s1=(''.join(reversed(s)))
-if s==s1:
-    print("Yep! Is a palindrome")
+import os
+p = os.listdir(r"C:\Users\GIMISI\Desktop\pp2-labs\tsis 6\dirnfile")
+
+if os.path.exists(p):
+    print("file and dir portions of the path")
+    print(os.path.basename(p))
+    print(os.path.dirname(p))
 else:
-    print("No")
+    print("pass doesnt exist!")
