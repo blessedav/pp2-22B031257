@@ -5,16 +5,16 @@ pg.init()
 
 class SOUND:
     def __init__(self, path_to_sound, path_to_covers):
-        self.sound = pg.mixer.Sound('Music\\' + path_to_sound)
-        self.photo = pg.image.load('AssetsPlayer\\Covers\\' + path_to_covers)
+        self.sound = pg.mixer.Sound('Muz\\' + path_to_sound)
+        self.photo = pg.image.load('AssetsPlayer\\covers\\' + path_to_covers)
         self.is_playing = True
 
     def placePhoto(self, screen):
         self.photo = pg.transform.scale(self.photo, (200, 200))
         screen.blit(self.photo, (111, 93))
 
-path_to_sound = os.listdir('Music\\')
-path_to_covers = os.listdir('AssetsPlayer\\Covers\\')
+path_to_sound = os.listdir('Muz\\')
+path_to_covers = os.listdir('AssetsPlayer\\covers\\')
 path_to_sound.sort()
 path_to_covers.sort()
 
