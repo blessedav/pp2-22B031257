@@ -59,7 +59,7 @@ class Player(pygame.sprite.Sprite):
         if self.rect.right < SCREEN_WIDTH:
             if pressed_keys[K_RIGHT]:
                 self.rect.move_ip(5,0)
-        # Столкновение со звездой
+        # Collision with a star
         collided_stars = pygame.sprite.spritecollide(self,Stars,True)
         for star in collided_stars:
             if star.weight == 1:
