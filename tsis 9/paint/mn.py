@@ -44,14 +44,14 @@ class BUTTONC:
 
 
 buttonsf=[]
-for i in range(0,6):
+for i in range(0,6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ):
     name="icon"+str(i)+".png"
     j=50
     k=50+100*i
     buttonsf.append(BUTTONF(name,j,k ))
 
 buttonsc=[]
-for i in range(0,6):
+for i in range(0,5):
     name="color"+str(i)+".png"
     j=750
     k=50+100*i
@@ -59,7 +59,7 @@ for i in range(0,6):
 
 mode=False
 figure="icon1"
-curcolor="color5"
+curcolor="color4"
 size=50
 
 brush=pg.image.load(figure+curcolor+".png")
