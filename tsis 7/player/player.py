@@ -21,8 +21,6 @@ path_to_covers.sort()
 sounds = []
 
 for index in zip(path_to_covers, path_to_sound):
-    print(index)
-    print(index[0])
     sound = SOUND(path_to_covers = index[0], path_to_sound = index[1])
     sounds.append(sound)
 
@@ -39,7 +37,6 @@ while 1:
         if event.type == pg.QUIT:
             pg.quit()
         if pg.mouse.get_pressed()[0]:
-            print(pg.mouse.get_pos())
             if 200 <= pg.mouse.get_pos()[0] <= 235 and 343 <= pg.mouse.get_pos()[1] <= 366:
                 if sounds[sound_index].is_playing:
                     pg.mixer.pause()
