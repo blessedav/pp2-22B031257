@@ -1,5 +1,7 @@
 import pygame, pygame.math, sys, random, time
-import psycopg2 as pgsql
+import psycopg2 as ps
+import pygame_menu
+import os
 from pygame.math import Vector2
 
 class SNAKE:
@@ -111,6 +113,38 @@ class MAIN:
         screen.blit(level_surface, level_rect)
 
     
+name = input('Enter name: ')
+
+sql_insert = '''
+    INSERT INTO snake VALUES(DEFAULT, %s, %s, %s);
+'''
+
+sql_upd = '''
+    UPDATE snake SET score = %s, level = %s WHERE name = %s;
+'''
+
+sql_delete = '''
+    DELETE FROM snake WHERE name = %s;
+'''
+
+sql_show_score = '''
+    SELECT name, score, level FROM snake
+    ORDER BY score DESC;
+'''
+top = 'TOP PLAYERS (Name, score, level)'
+
+conn = ps.connect(host = 'localhost',
+                  database = 'snake',
+                  user = 'postgres',
+                  password = 'admin',
+                  port = '5432'
+)
+
+
+cur = conn.cursor()
+
+cur.execute(sql_show_score)
+hhhh = cur.fetchall()
 
 pygame.init()
 cell_size = 40
