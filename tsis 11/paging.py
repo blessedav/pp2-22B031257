@@ -1,7 +1,7 @@
 import psycopg2 as ps
 
 sql = '''
-SELECT * FROM phonebook
+SELECT * FROM phonebook;
 '''
 
 conn = ps.connect(host = 'localhost',
