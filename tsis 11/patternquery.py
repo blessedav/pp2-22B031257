@@ -1,12 +1,12 @@
 import psycopg2 as ps
 
 sql = '''
-SELECT * FROM phone
+SELECT * FROM phonebook
 WHERE 
 '''
 
 conn = ps.connect(host = 'localhost',
-                  dbname = 'phonebook',
+                  dbname = 'phone_book2',
                   user = 'postgres',
                   password = 'admin',
                   port = '5432' 
@@ -18,7 +18,7 @@ cur = conn.cursor()
 print(r"Do you want to search by phone(0)/name(1)/break(any num) enter the number:")
 mode=int(input())
 if mode==0:
-        sql+="phone_number"
+        sql+="phone"
         print("Enter number")
         subint=int(input())
         print("""Select option:

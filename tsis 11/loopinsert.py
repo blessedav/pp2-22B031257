@@ -1,11 +1,11 @@
 import psycopg2 as ps
 
 sql = """
-INSERT INTO phone VALUES(DEFAULT, %s, %s);
+INSERT INTO phonebook VALUES(DEFAULT, %s, %s);
 """
 
 conn = ps.connect(host = 'localhost',
-                  dbname = 'phonebook',
+                  dbname = 'phone_book2',
                   user = 'postgres',
                   password = 'admin',
                   port = '5432' 
